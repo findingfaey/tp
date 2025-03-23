@@ -20,8 +20,8 @@ public class JsonAdaptedDrink {
      */
     @JsonCreator
     public JsonAdaptedDrink(@JsonProperty("name") String name,
-                           @JsonProperty("price") double price,
-                           @JsonProperty("category") String category) {
+                            @JsonProperty("price") double price,
+                            @JsonProperty("category") String category) {
         this.name = name;
         this.price = price;
         this.category = category;

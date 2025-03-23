@@ -58,7 +58,6 @@ public class HoursAddCommandTest {
     }
 
 
-
     @Test
     public void execute_validIndex_success() throws CommandException {
         Index validIndex = Index.fromOneBased(1);

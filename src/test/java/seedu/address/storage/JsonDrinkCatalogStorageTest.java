@@ -45,17 +45,17 @@ public class JsonDrinkCatalogStorageTest {
 
     private String getValidJsonContent() {
         return "{ \"drinks\": [ "
-            + "{ \"name\": \"Latte\", \"price\": 4.50, \"size\": \"Medium\", \"ingredients\":"
-            + " [\"Espresso\", \"Milk\"] }, "
-            + "{ \"name\": \"Cappuccino\", \"price\": 4.00, \"size\": \"Small\", \"ingredients\":"
-            + "[\"Espresso\", \"Milk\", \"Foam\"] } "
-            + "] }";
+                + "{ \"name\": \"Latte\", \"price\": 4.50, \"size\": \"Medium\", \"ingredients\":"
+                + " [\"Espresso\", \"Milk\"] }, "
+                + "{ \"name\": \"Cappuccino\", \"price\": 4.00, \"size\": \"Small\", \"ingredients\":"
+                + "[\"Espresso\", \"Milk\", \"Foam\"] } "
+                + "] }";
     }
 
     private String getInvalidJsonContent() {
         return "{ \"drinks\": [ "
-            + "{ \"name\": \"Espresso\", \"price\": \"invalid_price\", \"size\": \"Small\", \"ingredients\": [] } "
-            + "] }";
+                + "{ \"name\": \"Espresso\", \"price\": \"invalid_price\", \"size\": \"Small\", \"ingredients\": [] } "
+                + "] }";
     }
 
     @Test
@@ -82,16 +82,15 @@ public class JsonDrinkCatalogStorageTest {
     }
 
 
-
     @Test
     public void saveDrinkCatalog_nullDrinkCatalog_throwsNullPointerException() {
         assertThrows(NullPointerException.class, () ->
-            new JsonDrinkCatalogStorage(validFilePath).saveDrinkCatalog(null));
+                new JsonDrinkCatalogStorage(validFilePath).saveDrinkCatalog(null));
     }
 
     @Test
     public void saveDrinkCatalog_nullFilePath_throwsNullPointerException() {
         assertThrows(NullPointerException.class, () ->
-            new JsonDrinkCatalogStorage(validFilePath).saveDrinkCatalog(new DrinkCatalog(), null));
+                new JsonDrinkCatalogStorage(validFilePath).saveDrinkCatalog(new DrinkCatalog(), null));
     }
 }

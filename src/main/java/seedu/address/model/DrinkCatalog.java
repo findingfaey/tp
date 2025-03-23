@@ -21,12 +21,12 @@ public class DrinkCatalog implements ReadOnlyDrinkCatalog {
      * The 'unusual' code block below is a non-static initialization block,
      * sometimes used to avoid duplication between constructors.
      * Note that non-static init blocks are not recommended to use.
-     */
-    {
+     */ {
         drinks = new UniqueDrinkList();
     }
 
-    public DrinkCatalog() {}
+    public DrinkCatalog() {
+    }
 
     /**
      * Creates a DrinkCatalog using the Drinks in {@code toBeCopied}.
@@ -90,7 +90,7 @@ public class DrinkCatalog implements ReadOnlyDrinkCatalog {
         drinks.remove(key);
     }
 
-    //// util methods
+    /// / util methods
 
     @Override
     public String toString() {

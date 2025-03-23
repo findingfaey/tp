@@ -32,13 +32,14 @@ public class EditStaffCommandParser implements Parser<EditStaffCommand> {
     /**
      * Parses the given {@code String} of arguments in the context of the EditStaffCommand
      * and returns an EditStaffCommand object for execution.
+     *
      * @throws ParseException if the user input does not conform the expected format
      */
     public EditStaffCommand parse(String args) throws ParseException {
         requireNonNull(args);
         ArgumentMultimap argMultimap =
-            ArgumentTokenizer.tokenize(args, PREFIX_NAME, PREFIX_PHONE, PREFIX_EMAIL, PREFIX_ADDRESS, PREFIX_TAG,
-                PREFIX_STAFF_ID, PREFIX_ROLE, PREFIX_SHIFT_TIMING, PREFIX_HOURS_WORKED, PREFIX_PERFORMANCE_RATING);
+                ArgumentTokenizer.tokenize(args, PREFIX_NAME, PREFIX_PHONE, PREFIX_EMAIL, PREFIX_ADDRESS, PREFIX_TAG,
+                        PREFIX_STAFF_ID, PREFIX_ROLE, PREFIX_SHIFT_TIMING, PREFIX_HOURS_WORKED, PREFIX_PERFORMANCE_RATING);
 
         Index index;
 
@@ -49,7 +50,7 @@ public class EditStaffCommandParser implements Parser<EditStaffCommand> {
         }
 
         argMultimap.verifyNoDuplicatePrefixesFor(PREFIX_NAME, PREFIX_PHONE, PREFIX_EMAIL, PREFIX_ADDRESS,
-            PREFIX_STAFF_ID, PREFIX_ROLE, PREFIX_SHIFT_TIMING, PREFIX_HOURS_WORKED, PREFIX_PERFORMANCE_RATING);
+                PREFIX_STAFF_ID, PREFIX_ROLE, PREFIX_SHIFT_TIMING, PREFIX_HOURS_WORKED, PREFIX_PERFORMANCE_RATING);
 
         EditStaffDescriptor editStaffDescriptor = new EditStaffDescriptor();
 
@@ -73,17 +74,17 @@ public class EditStaffCommandParser implements Parser<EditStaffCommand> {
         }
         if (argMultimap.getValue(PREFIX_SHIFT_TIMING).isPresent()) {
             editStaffDescriptor.setShiftTiming(
-                ParserUtil.parseShiftTiming(argMultimap.getValue(PREFIX_SHIFT_TIMING).get())
+                    ParserUtil.parseShiftTiming(argMultimap.getValue(PREFIX_SHIFT_TIMING).get())
             );
         }
         if (argMultimap.getValue(PREFIX_HOURS_WORKED).isPresent()) {
             editStaffDescriptor.setHoursWorked(
-                ParserUtil.parseHoursWorked(argMultimap.getValue(PREFIX_HOURS_WORKED).get())
+                    ParserUtil.parseHoursWorked(argMultimap.getValue(PREFIX_HOURS_WORKED).get())
             );
         }
         if (argMultimap.getValue(PREFIX_PERFORMANCE_RATING).isPresent()) {
             editStaffDescriptor.setPerformanceRating(
-                ParserUtil.parsePerformanceRating(argMultimap.getValue(PREFIX_PERFORMANCE_RATING).get())
+                    ParserUtil.parsePerformanceRating(argMultimap.getValue(PREFIX_PERFORMANCE_RATING).get())
             );
         }
         parseTagsForEdit(argMultimap.getAllValues(PREFIX_TAG)).ifPresent(editStaffDescriptor::setTags);

@@ -177,7 +177,8 @@ public class MainWindow extends UiPart<Stage> {
 
     /**
      * Sets the accelerator of a MenuItem.
-     * @param menuItem the MenuItem to set the accelerator for
+     *
+     * @param menuItem       the MenuItem to set the accelerator for
      * @param keyCombination the KeyCombination value of the accelerator
      */
     private void setAccelerator(MenuItem menuItem, KeyCombination keyCombination) {
@@ -221,39 +222,39 @@ public class MainWindow extends UiPart<Stage> {
             logger.info("Tab changed to index " + tabIndex);
 
             switch (tabIndex) {
-            case 0: // Staff tab
-                logger.info("Switched to Staff tab");
-                // Restore previous staff selection if any
-                if (lastSelectedStaff != null && staffListPanel != null) {
-                    staffListPanel.selectStaff(lastSelectedStaff);
-                }
-                // Ensure command box has focus
-                focusCommandBox();
-                break;
+                case 0: // Staff tab
+                    logger.info("Switched to Staff tab");
+                    // Restore previous staff selection if any
+                    if (lastSelectedStaff != null && staffListPanel != null) {
+                        staffListPanel.selectStaff(lastSelectedStaff);
+                    }
+                    // Ensure command box has focus
+                    focusCommandBox();
+                    break;
 
-            case 1: // Customer tab
-                logger.info("Switched to Customer tab");
-                // Restore previous customer selection if any
-                if (lastSelectedCustomer != null && customerListPanel != null) {
-                    customerListPanel.selectCustomer(lastSelectedCustomer);
-                }
-                // Ensure command box has focus
-                focusCommandBox();
-                break;
+                case 1: // Customer tab
+                    logger.info("Switched to Customer tab");
+                    // Restore previous customer selection if any
+                    if (lastSelectedCustomer != null && customerListPanel != null) {
+                        customerListPanel.selectCustomer(lastSelectedCustomer);
+                    }
+                    // Ensure command box has focus
+                    focusCommandBox();
+                    break;
 
-            case 2: // Drinks tab
-                logger.info("Switched to Drinks tab");
-                // Restore previous drink selection if any
-                if (lastSelectedDrink != null && drinkListPanel != null) {
-                    drinkListPanel.selectDrink(lastSelectedDrink);
-                }
-                // Ensure command box has focus
-                focusCommandBox();
-                break;
+                case 2: // Drinks tab
+                    logger.info("Switched to Drinks tab");
+                    // Restore previous drink selection if any
+                    if (lastSelectedDrink != null && drinkListPanel != null) {
+                        drinkListPanel.selectDrink(lastSelectedDrink);
+                    }
+                    // Ensure command box has focus
+                    focusCommandBox();
+                    break;
 
-            default:
-                logger.warning("Unknown tab index: " + tabIndex);
-                break;
+                default:
+                    logger.warning("Unknown tab index: " + tabIndex);
+                    break;
             }
         });
     }
@@ -489,6 +490,7 @@ public class MainWindow extends UiPart<Stage> {
 
     /**
      * Selects the specified tab.
+     *
      * @param tabIndex The index of the tab to select (0-based)
      */
     public void selectTab(int tabIndex) {

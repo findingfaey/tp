@@ -19,7 +19,8 @@ public interface DrinkCatalogStorage {
 
     /**
      * Returns DrinkCatalog data as a {@link ReadOnlyDrinkCatalog}.
-     *   Returns {@code Optional.empty()} if storage file is not found.
+     * Returns {@code Optional.empty()} if storage file is not found.
+     *
      * @throws DataLoadingException if the data file is not in the correct format.
      */
     Optional<ReadOnlyDrinkCatalog> readDrinkCatalog() throws DataLoadingException;
@@ -31,6 +32,7 @@ public interface DrinkCatalogStorage {
 
     /**
      * Saves the given {@link ReadOnlyDrinkCatalog} to the storage.
+     *
      * @param drinkCatalog cannot be null.
      * @throws java.io.IOException if there was any problem writing to the file.
      */

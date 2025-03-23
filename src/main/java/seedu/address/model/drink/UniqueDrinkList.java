@@ -18,7 +18,7 @@ import seedu.address.model.drink.exceptions.DuplicateDrinkException;
  * that the drink being added or updated is unique in terms of identity in the list.
  * However, removal of a drink uses {@code Drink#equals(Object)} to ensure that the
  * drink with exactly the same fields will be removed.
- *
+ * <p>
  * Supports a minimal set of list operations.
  *
  * @see Drink#isSameDrink(Drink)

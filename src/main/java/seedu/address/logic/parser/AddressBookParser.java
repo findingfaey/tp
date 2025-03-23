@@ -53,7 +53,7 @@ public class AddressBookParser {
 
     static {
         COMMAND_MAP.put(
-            AddCommand.COMMAND_WORD, arguments -> new AddCommandParser().parse(arguments));
+                AddCommand.COMMAND_WORD, arguments -> new AddCommandParser().parse(arguments));
         COMMAND_MAP.put(EditCommand.COMMAND_WORD, arguments -> new EditCommandParser().parse(arguments));
         COMMAND_MAP.put(DeleteCommand.COMMAND_WORD, arguments -> new DeleteCommandParser().parse(arguments));
         COMMAND_MAP.put(ClearCommand.COMMAND_WORD, arguments -> new ClearCommand());
@@ -63,19 +63,19 @@ public class AddressBookParser {
         COMMAND_MAP.put(ExitCommand.COMMAND_WORD, arguments -> new ExitCommand());
         COMMAND_MAP.put(HelpCommand.COMMAND_WORD, arguments -> new HelpCommand());
         COMMAND_MAP.put(
-            AddStaffCommand.COMMAND_WORD, arguments -> new AddStaffCommandParser().parse(arguments));
+                AddStaffCommand.COMMAND_WORD, arguments -> new AddStaffCommandParser().parse(arguments));
         COMMAND_MAP.put(
-            AddStaffCommand.COMMAND_WORD_SHORTCUT, arguments -> new AddStaffCommandParser().parse(arguments));
+                AddStaffCommand.COMMAND_WORD_SHORTCUT, arguments -> new AddStaffCommandParser().parse(arguments));
         COMMAND_MAP.put(
-            EditStaffCommand.COMMAND_WORD, arguments -> new EditStaffCommandParser().parse(arguments));
+                EditStaffCommand.COMMAND_WORD, arguments -> new EditStaffCommandParser().parse(arguments));
         COMMAND_MAP.put(
-            DeleteStaffCommand.COMMAND_WORD, arguments -> new DeleteStaffCommandParser().parse(arguments));
+                DeleteStaffCommand.COMMAND_WORD, arguments -> new DeleteStaffCommandParser().parse(arguments));
         COMMAND_MAP.put(
-            AddCustomerCommand.COMMAND_WORD, arguments -> new AddCustomerCommandParser().parse(arguments));
+                AddCustomerCommand.COMMAND_WORD, arguments -> new AddCustomerCommandParser().parse(arguments));
         COMMAND_MAP.put(
-            AddCustomerCommand.COMMAND_WORD_SHORTCUT, arguments -> new AddCustomerCommandParser().parse(arguments));
+                AddCustomerCommand.COMMAND_WORD_SHORTCUT, arguments -> new AddCustomerCommandParser().parse(arguments));
         COMMAND_MAP.put(
-            DeleteCustomerCommand.COMMAND_WORD, arguments -> new DeleteCustomerCommandParser().parse(arguments));
+                DeleteCustomerCommand.COMMAND_WORD, arguments -> new DeleteCustomerCommandParser().parse(arguments));
         COMMAND_MAP.put(AddDrinkCommand.COMMAND_WORD, arguments -> new AddDrinkCommandParser().parse(arguments));
         COMMAND_MAP.put(PurchaseCommand.COMMAND_WORD, arguments -> new PurchaseCommandParser().parse(arguments));
         COMMAND_MAP.put(HoursAddCommand.COMMAND_WORD, arguments -> new HoursAddCommandParser().parse(arguments));
@@ -109,11 +109,11 @@ public class AddressBookParser {
         String closestCommand = findClosestCommand(commandWord);
         if (closestCommand != null) {
             throw new ParseException(
-                String.format(
-                    "Unknown command: '%s'. Did you mean '%s'?",
-                    commandWord,
-                    closestCommand
-                )
+                    String.format(
+                            "Unknown command: '%s'. Did you mean '%s'?",
+                            commandWord,
+                            closestCommand
+                    )
             );
         }
 
@@ -164,8 +164,8 @@ public class AddressBookParser {
                 .collect(Collectors.toCollection(HashSet::new));
 
         Set<Character> intersection = tokensA.stream()
-            .filter(tokensB::contains)
-            .collect(Collectors.toSet());
+                .filter(tokensB::contains)
+                .collect(Collectors.toSet());
 
         Set<Character> union = new HashSet<>(tokensA);
         union.addAll(tokensB);
@@ -184,8 +184,8 @@ public class AddressBookParser {
                     dp[i][j] = i;
                 } else {
                     dp[i][j] = Math.min(
-                        dp[i - 1][j - 1] + (a.charAt(i - 1) == b.charAt(j - 1) ? 0 : 1),
-                        Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1)
+                            dp[i - 1][j - 1] + (a.charAt(i - 1) == b.charAt(j - 1) ? 0 : 1),
+                            Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1)
                     );
                 }
             }

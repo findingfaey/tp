@@ -27,9 +27,10 @@ public class TypicalDrinks {
     // Drinks with unusual properties for testing edge cases
     public static final Drink EXPENSIVE_SPECIALTY = new Drink("Special Reserve Coffee", 15.00, "Specialty");
     public static final Drink LONG_NAME_DRINK = new Drink("Super Deluxe Triple Shot Caramel Vanilla "
-        + "Bean Latte with Extra Whipped Cream", 6.00, "Coffee");
+            + "Bean Latte with Extra Whipped Cream", 6.00, "Coffee");
 
-    private TypicalDrinks() {} // prevents instantiation
+    private TypicalDrinks() {
+    } // prevents instantiation
 
     /**
      * Returns a {@code DrinkCatalog} with all the typical drinks.

@@ -8,18 +8,18 @@
 <?import javafx.scene.layout.HBox?>
 
 <StackPane fx:id="welcomePane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-           styleClass="background" >
+           styleClass="background">
     <VBox alignment="CENTER" spacing="30">
         <padding>
-            <Insets bottom="20" left="20" right="20" top="20" />
+            <Insets bottom="20" left="20" right="20" top="20"/>
         </padding>
 
-        <Label text="CafeConnect" styleClass="welcome-title" />
-        <Label text="Staff and Customer Management System" styleClass="welcome-text" />
+        <Label text="CafeConnect" styleClass="welcome-title"/>
+        <Label text="Staff and Customer Management System" styleClass="welcome-text"/>
 
         <HBox spacing="20" alignment="CENTER">
-            <Button fx:id="staffCustomerButton" text="Staff &amp; Customer Management" styleClass="welcome-button" />
-            <Button fx:id="drinksMenuButton" text="Drinks Menu" styleClass="welcome-button" />
+            <Button fx:id="staffCustomerButton" text="Staff &amp; Customer Management" styleClass="welcome-button"/>
+            <Button fx:id="drinksMenuButton" text="Drinks Menu" styleClass="welcome-button"/>
         </HBox>
     </VBox>
 </StackPane>

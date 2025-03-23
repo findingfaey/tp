@@ -22,12 +22,12 @@ public class BackgroundImageManager {
      */
     public static void preloadBackgroundImages() {
         String[] backgrounds = {
-            "/images/cafe-welcome-bg.jpg",
-            "/images/background1.png",
-            "/images/background2.png",
-            "/images/background3.png",
-            "/images/background4.png",
-            "/images/background5.png"
+                "/images/cafe-welcome-bg.jpg",
+                "/images/background1.png",
+                "/images/background2.png",
+                "/images/background3.png",
+                "/images/background4.png",
+                "/images/background5.png"
         };
 
         for (String path : backgrounds) {
@@ -75,7 +75,7 @@ public class BackgroundImageManager {
     /**
      * Sets a background image on a region using CSS.
      *
-     * @param region The region to apply the background to
+     * @param region    The region to apply the background to
      * @param imagePath The resource path to the image
      */
     public static void setBackgroundImage(Region region, String imagePath) {

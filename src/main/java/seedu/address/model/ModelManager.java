@@ -47,7 +47,8 @@ public class ModelManager implements Model {
         filteredPersons = new FilteredList<>(this.addressBook.getPersonList());
         filteredStaffs = new FilteredList<>(this.addressBook.getStaffList());
         filteredCustomers = new FilteredList<>(this.addressBook.getCustomerList());
-        filteredDrinks = new FilteredList<>(this.drinkCatalog.getDrinkList());;
+        filteredDrinks = new FilteredList<>(this.drinkCatalog.getDrinkList());
+        ;
 
     }
 
@@ -137,6 +138,7 @@ public class ModelManager implements Model {
         requireNonNull(predicate);
         filteredStaffs.setPredicate(predicate);
     }
+
     @Override
     public void updateFilteredCustomerList(Predicate<Customer> predicate) {
         requireNonNull(predicate);
@@ -269,6 +271,7 @@ public class ModelManager implements Model {
         requireNonNull(predicate);
         filteredDrinks.setPredicate(predicate);
     }
+
     @Override
     public ReadOnlyDrinkCatalog getDrinkCatalog() {
         return drinkCatalog;

@@ -122,14 +122,14 @@ public class AddressBookParserTest {
                 HoursAddCommand.MESSAGE_USAGE), ()
                 -> parser.parseCommand(HoursAddCommand.COMMAND_WORD + " 1 " + PREFIX_HOURS + "-5"));
         assertThrows(ParseException.class, String.format(MESSAGE_INVALID_COMMAND_FORMAT,
-                        HoursAddCommand.MESSAGE_USAGE), ()
+                HoursAddCommand.MESSAGE_USAGE), ()
                 -> parser.parseCommand(HoursAddCommand.COMMAND_WORD + " abc " + PREFIX_HOURS + "8"));
     }
 
     @Test
     public void parseCommand_unrecognisedInput_throwsParseException() {
         assertThrows(ParseException.class, String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE), ()
-            -> parser.parseCommand(""));
+                -> parser.parseCommand(""));
     }
 
     @Test

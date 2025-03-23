@@ -77,6 +77,7 @@ public class CustomerDetailPanel extends UiPart<Region> {
 
     /**
      * Verifies that critical FXML components were loaded properly.
+     *
      * @return true if all critical components exist
      */
     private boolean verifyComponents() {
@@ -201,7 +202,7 @@ public class CustomerDetailPanel extends UiPart<Region> {
      * Safely sets text to a label, handling null cases.
      *
      * @param label The label to update
-     * @param text The text to set
+     * @param text  The text to set
      */
     private void safeSetText(Label label, String text) {
         if (label != null) {

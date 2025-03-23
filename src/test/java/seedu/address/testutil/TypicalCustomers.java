@@ -14,17 +14,17 @@ public class TypicalCustomers {
 
 
     public static final Customer JAMES = new CustomerBuilder().withName("James Wilson")
-        .withCustomerId("C10012")
-        .withAddress("45 Orchard Road, #12-34")
-        .withEmail("james@example.com")
-        .withPhone("91234789")
-        .withRemark("Prefers decaf")
-        .withRewardPoints("200")
-        .withVisitCount("12")
-        .withFavoriteItem("Flat White")
-        .withTotalSpent("155.75")
+            .withCustomerId("C10012")
+            .withAddress("45 Orchard Road, #12-34")
+            .withEmail("james@example.com")
+            .withPhone("91234789")
+            .withRemark("Prefers decaf")
+            .withRewardPoints("200")
+            .withVisitCount("12")
+            .withFavoriteItem("Flat White")
+            .withTotalSpent("155.75")
 
-        .withTags("regular", "student").build();
+            .withTags("regular", "student").build();
 
     public static final Customer OLIVIA = new CustomerBuilder().withName("Olivia Chen")
             .withCustomerId("C12345")
@@ -38,7 +38,8 @@ public class TypicalCustomers {
             .withTotalSpent("42.90")
             .withTags("new", "student").build();
 
-    private TypicalCustomers() {} // prevents instantiation
+    private TypicalCustomers() {
+    } // prevents instantiation
 
     /**
      * Returns a list of all typical customers for testing.

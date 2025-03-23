@@ -14,6 +14,7 @@ public class DeleteCustomerCommandParser implements Parser<DeleteCustomerCommand
     /**
      * Parses the given {@code String} of arguments in the context of the DeleteCustomerCommand
      * and returns a DeleteCustomerCommand object for execution.
+     *
      * @throws ParseException if the user input does not conform the expected format
      */
     public DeleteCustomerCommand parse(String args) throws ParseException {

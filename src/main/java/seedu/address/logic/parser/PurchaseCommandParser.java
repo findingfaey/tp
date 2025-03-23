@@ -19,6 +19,7 @@ public class PurchaseCommandParser implements Parser<PurchaseCommand> {
     /**
      * Parses the given {@code String} of arguments in the context of the PurchaseCommand
      * and returns a PurchaseCommand object for execution.
+     *
      * @throws ParseException if the user input does not conform to the expected format
      */
     public PurchaseCommand parse(String args) throws ParseException {

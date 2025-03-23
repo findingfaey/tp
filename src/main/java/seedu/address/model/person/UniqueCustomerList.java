@@ -18,7 +18,7 @@ import seedu.address.model.person.exceptions.PersonNotFoundException;
  * to ensure that the customer being added or updated is unique in terms of identity in the UniqueCustomerList.
  * However, the removal of a customer uses Customer#equals(Object) so as to ensure that the customer with
  * exactly the same fields will be removed.
- *
+ * <p>
  * Supports a minimal set of list operations.
  *
  * @see Customer#isSameCustomer(Customer)
@@ -97,6 +97,7 @@ public class UniqueCustomerList implements Iterable<Customer> {
         requireNonNull(replacement);
         internalList.setAll(replacement.internalList);
     }
+
     /**
      * Returns the backing list as an unmodifiable {@code ObservableList}.
      */

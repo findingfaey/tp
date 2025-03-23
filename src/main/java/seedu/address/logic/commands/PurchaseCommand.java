@@ -35,14 +35,14 @@ public class PurchaseCommand extends Command {
     public static final String COMMAND_WORD = "purchase";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Records a purchase for a customer "
-        + "identified by the index number in the displayed customer list.\n"
-        + "Parameters: ind/INDEX n/DRINK_NAME\n"
-        + "Example: " + COMMAND_WORD + " ind/1 n/ICED LATTE";
+            + "identified by the index number in the displayed customer list.\n"
+            + "Parameters: ind/INDEX n/DRINK_NAME\n"
+            + "Example: " + COMMAND_WORD + " ind/1 n/ICED LATTE";
 
     public static final String MESSAGE_PURCHASE_SUCCESS = "Purchase recorded for %1$s.\n"
-        + "Drink: %2$s, Price: $%3$.2f\n"
-        + "Points earned: %4$d, New total points: %5$d\n"
-        + "New total spent: $%6$.2f";
+            + "Drink: %2$s, Price: $%3$.2f\n"
+            + "Points earned: %4$d, New total points: %5$d\n"
+            + "New total spent: $%6$.2f";
 
     public static final String MESSAGE_DRINK_NOT_FOUND = "Drink '%1$s' not found in the catalog.";
 

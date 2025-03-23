@@ -71,7 +71,7 @@ public class EditStaffCommand extends Command {
     private final EditStaffDescriptor editStaffDescriptor;
 
     /**
-     * @param index of the staff in the filtered staff list to edit
+     * @param index               of the staff in the filtered staff list to edit
      * @param editStaffDescriptor details to edit the staff with
      */
     public EditStaffCommand(Index index, EditStaffDescriptor editStaffDescriptor) {

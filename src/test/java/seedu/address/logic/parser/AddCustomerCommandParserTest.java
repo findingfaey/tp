@@ -150,33 +150,33 @@ public class AddCustomerCommandParserTest {
 
         // missing customer id prefix
         assertParseFailure(parser, NAME_DESC_JAMES + PHONE_DESC_JAMES + EMAIL_DESC_JAMES + ADDRESS_DESC_JAMES
-                        + VALID_ADDRESS_JAMES + REWARD_POINTS_DESC_JAMES + VALID_VISIT_COUNT_JAMES
-                        + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES, expectedMessage);
+                + VALID_ADDRESS_JAMES + REWARD_POINTS_DESC_JAMES + VALID_VISIT_COUNT_JAMES
+                + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES, expectedMessage);
 
         // missing name prefix
         assertParseFailure(parser, VALID_NAME_JAMES + PHONE_DESC_JAMES + EMAIL_DESC_JAMES + ADDRESS_DESC_JAMES
-                        + CUSTOMER_ID_DESC_JAMES + REWARD_POINTS_DESC_JAMES + VISIT_COUNT_DESC_JAMES
-                        + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES, expectedMessage);
+                + CUSTOMER_ID_DESC_JAMES + REWARD_POINTS_DESC_JAMES + VISIT_COUNT_DESC_JAMES
+                + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES, expectedMessage);
 
         // missing phone prefix
         assertParseFailure(parser, NAME_DESC_JAMES + VALID_PHONE_JAMES + EMAIL_DESC_JAMES + ADDRESS_DESC_JAMES
-                        + CUSTOMER_ID_DESC_JAMES + REWARD_POINTS_DESC_JAMES + VISIT_COUNT_DESC_JAMES
-                        + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES, expectedMessage);
+                + CUSTOMER_ID_DESC_JAMES + REWARD_POINTS_DESC_JAMES + VISIT_COUNT_DESC_JAMES
+                + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES, expectedMessage);
 
         // missing email prefix
         assertParseFailure(parser, NAME_DESC_JAMES + PHONE_DESC_JAMES + VALID_EMAIL_JAMES + ADDRESS_DESC_JAMES
-                        + CUSTOMER_ID_DESC_JAMES + REWARD_POINTS_DESC_JAMES + VISIT_COUNT_DESC_JAMES
-                        + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES, expectedMessage);
+                + CUSTOMER_ID_DESC_JAMES + REWARD_POINTS_DESC_JAMES + VISIT_COUNT_DESC_JAMES
+                + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES, expectedMessage);
 
         // missing reward points prefix
         assertParseFailure(parser, NAME_DESC_JAMES + PHONE_DESC_JAMES + EMAIL_DESC_JAMES + ADDRESS_DESC_JAMES
-                        + CUSTOMER_ID_DESC_JAMES + VALID_REWARD_POINTS_JAMES + VISIT_COUNT_DESC_JAMES
-                        + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES, expectedMessage);
+                + CUSTOMER_ID_DESC_JAMES + VALID_REWARD_POINTS_JAMES + VISIT_COUNT_DESC_JAMES
+                + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES, expectedMessage);
 
         // missing visit count prefix
         assertParseFailure(parser, NAME_DESC_JAMES + PHONE_DESC_JAMES + EMAIL_DESC_JAMES + ADDRESS_DESC_JAMES
-                        + CUSTOMER_ID_DESC_JAMES + REWARD_POINTS_DESC_JAMES + VALID_VISIT_COUNT_JAMES
-                        + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES, expectedMessage);
+                + CUSTOMER_ID_DESC_JAMES + REWARD_POINTS_DESC_JAMES + VALID_VISIT_COUNT_JAMES
+                + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES, expectedMessage);
     }
 
     @Test
@@ -207,14 +207,14 @@ public class AddCustomerCommandParserTest {
 
         // invalid tag
         assertParseFailure(parser, NAME_DESC_JAMES + PHONE_DESC_JAMES + EMAIL_DESC_JAMES + ADDRESS_DESC_JAMES
-                + CUSTOMER_ID_DESC_JAMES + REWARD_POINTS_DESC_JAMES + VISIT_COUNT_DESC_JAMES
-                + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES + INVALID_TAG_DESC,
+                        + CUSTOMER_ID_DESC_JAMES + REWARD_POINTS_DESC_JAMES + VISIT_COUNT_DESC_JAMES
+                        + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES + INVALID_TAG_DESC,
                 Tag.MESSAGE_CONSTRAINTS);
 
         // non-empty preamble
         assertParseFailure(parser, PREAMBLE_NON_EMPTY + NAME_DESC_JAMES + PHONE_DESC_JAMES + EMAIL_DESC_JAMES
-                + ADDRESS_DESC_JAMES + CUSTOMER_ID_DESC_JAMES + REWARD_POINTS_DESC_JAMES + VISIT_COUNT_DESC_JAMES
-                + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES,
+                        + ADDRESS_DESC_JAMES + CUSTOMER_ID_DESC_JAMES + REWARD_POINTS_DESC_JAMES + VISIT_COUNT_DESC_JAMES
+                        + FAVORITE_ITEM_DESC_JAMES + TOTAL_SPENT_DESC_JAMES,
                 String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCustomerCommand.MESSAGE_USAGE));
     }
 

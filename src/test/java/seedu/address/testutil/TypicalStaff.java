@@ -22,7 +22,8 @@ public class TypicalStaff {
             .withStaffId("S1002").withRole("Cashier").withShiftTiming("4pm-12am")
             .withHoursWorked("38").withPerformanceRating("4.2").withTags("punctual").build();
 
-    private TypicalStaff() {} // prevents instantiation
+    private TypicalStaff() {
+    } // prevents instantiation
 
     public static List<Staff> getTypicalStaff() {
         return new ArrayList<>(Arrays.asList(ALEX, BEN));

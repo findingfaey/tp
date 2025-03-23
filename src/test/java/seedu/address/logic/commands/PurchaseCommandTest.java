@@ -51,17 +51,17 @@ public class PurchaseCommandTest {
         // Create an address book with at least one customer
         AddressBook addressBook = new AddressBook();
         Customer testCustomer = new Customer(
-            new Name("Test Customer"),
-            new Phone("12345678"),
-            new Email("test@example.com"),
-            new Address("Test Address"),
-            new Remark(""),
-            new HashSet<>(),
-            new CustomerId("C001"),
-            new RewardPoints("100"),
-            new VisitCount("5"),
-            new FavouriteItem("Coffee"),
-            new TotalSpent("50.0")
+                new Name("Test Customer"),
+                new Phone("12345678"),
+                new Email("test@example.com"),
+                new Address("Test Address"),
+                new Remark(""),
+                new HashSet<>(),
+                new CustomerId("C001"),
+                new RewardPoints("100"),
+                new VisitCount("5"),
+                new FavouriteItem("Coffee"),
+                new TotalSpent("50.0")
         );
         addressBook.addCustomer(testCustomer);
 

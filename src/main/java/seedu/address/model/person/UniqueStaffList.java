@@ -18,7 +18,7 @@ import seedu.address.model.person.exceptions.StaffNotFoundException;
  * that the staff member being added or updated is unique in terms of identity in the list.
  * However, removal of a staff member uses {@code Staff#equals(Object)} to ensure that the
  * staff member with exactly the same fields will be removed.
- *
+ * <p>
  * Supports a minimal set of list operations.
  *
  * @see Staff#isSameStaff(Staff)

@@ -14,6 +14,7 @@ public class DeleteStaffCommandParser implements Parser<DeleteStaffCommand> {
     /**
      * Parses the given {@code String} of arguments in the context of the DeleteStaffCommand
      * and returns a DeleteStaffCommand object for execution.
+     *
      * @throws ParseException if the user input does not conform the expected format
      */
     public DeleteStaffCommand parse(String args) throws ParseException {

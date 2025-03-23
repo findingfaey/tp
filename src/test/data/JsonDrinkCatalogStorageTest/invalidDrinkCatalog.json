@@ -1,10 +1,10 @@
 {
-    "drinks": [
-      {
-        "name": "Espresso",
-        "price": "invalid_price",
-        "size": "Small",
-        "ingredients": []
-      }
-    ]
-  }
+  "drinks": [
+    {
+      "name": "Espresso",
+      "price": "invalid_price",
+      "size": "Small",
+      "ingredients": []
+    }
+  ]
+}

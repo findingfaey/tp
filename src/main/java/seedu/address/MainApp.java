@@ -92,10 +92,10 @@ public class MainApp extends Application {
         try {
             // Load Gotham font family
             loadFontFamily("/fonts/", new String[]{
-                "Gotham-Book.otf",
-                "GOTHAM-BOLD.TTF",
-                "GOTHAM-LIGHT.TTF",
-                "GOTHAM-MEDIUM.TTF"
+                    "Gotham-Book.otf",
+                    "GOTHAM-BOLD.TTF",
+                    "GOTHAM-LIGHT.TTF",
+                    "GOTHAM-MEDIUM.TTF"
             });
             logger.info("Gotham fonts loaded successfully");
         } catch (Exception e) {
